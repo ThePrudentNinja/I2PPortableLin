@@ -1,0 +1,6 @@
+#!/bin/bash
+
+file=$(echo "$1" | rev | cut -d / -f 1 | rev)
+
+cd ../I2P/
+xterm -hold -e echo "Downloading $file ..." && ./eepget -n 99 -o ../../Downloads/$file $1

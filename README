@@ -1,12 +1,22 @@
-I2P Portable Linux Version
-Project Homepage: http://theprudentninja.com/i2p-portable-portableapps/
+I2P Portable Linux Version (with browser, IRC client, and iMule) 64bit
+Project Homepage: None
 Project Github: https://github.com/ThePrudentNinja/I2PPortableLin
 I2P Project Homepage: http://geti2p.net/
 
+TO GET STARTED:
+First, if you are using a 32bit system, this suite is not for you. This suite is designed for use with 64bit systems.
+Download or clone this project. Set +x on the fix-permissions.sh script and execute it. Read the file Needed-Deps and make sure you have them all. Start I2P via the I2P.desktop file. Wait a moment, then start the I2PBrowser.desktop to start the browser. For iMule, wait about a half hour or so from first start so I2P has a chance to become better integrated into the network. the iMule aspect of this "suite" is experimental. If you find problems, let me know. Once you have I2P and the I2PBrowser up, click the bookmark for changing your bandwidth settings and adjust them to match your internet speed. If on the I2P router console page (the home page for the I2PBrowser) says "Network OK", then all is good. If it says you are firewalled, you will need to find the port that I2P is using and forward it on your router. Each router is different so I can't tell you how. You could remain firewalled but it will seriously impact performance and anonymity.
+
 This project and I are not affiliated in any way with I2P ( http://geti2p.net ) or the developers of I2P. Do not pester them with issues relating to I2PPortable unless the issue is directly related to I2P itself.
 
-I am currently working alone with this portable I2P. It is basically I2P with some modified configuration files to make it portable and organized to fit the PortableApps standard. I am entirely new to the PortableApps platform but decided to give it a go. This is the result. Why I2P? I2P has a HUGE amount of potential, however it is hardly known and generally speaking the interface is not all that friendly to new users. Imagine an encrypted, decentralized, and private layer over top of the normal internet. Within I2P is forums, pastebins, software development websites (called eepsites), and more. This I2PPortable release is my first attempt of many to help make I2P easier to use. I welcome all feedback from those who know more about the PortableApps platform or may wish to help contribute to this. Thank you.
+This "suite" is I2P with a modified Tor browser. The Tor browser has been modified to connect to I2P and has an IRC chat client built in. The I2Psuite.desktop file launches everything. After each launch, the script updates the icon so after first launch, the icon will work until the .desktop file is moved again. If you just want to launch the browser, the I2PBrowser.desktop file will do it. If you launch this suite with the I2Psuite.desktop file and close the browser, LEAVE the terminal window open or I2P will shut down in a harsh way which is bad for the network, and bad for your reputation. To close everything, in the browser go to the home page and click shutdown. Wait until it shuts down, then close the browser, then close the terminal window. If you want to leave I2P running but only close the browser, close the browser but leave the terminal window open. You can minimize it or move it to another desktop if you want it out of sight.
 
+To chat with others on the IRC network within I2P, click the "Chat with us!" bookmark and wait. It's a good idea to have your router up and running at least a half hour before trying to join us for chat. This is why it's a good idea to leave I2P running so next time you can just launch the browser by itself and I2P is already running and well integrated (which means faster).
+
+Be sure to adjust your bandwidth configuration (there is a bookmark for that) so I2P will run at its best. It's advised to not set the share setting below about 50% as it will make it easier for observers to spot your traffic. The more you share, the better it is. The closer the bandwidth settings are to your actual internet speeds, the better I2P will perform and the more satisfied you will be with it.
+
+iMule has been added as well for file sharing purposes. Please read the file named: Needed-Deps
+Also note, due to the nature of file sharing on I2P (and any anonymous network), you may see files you may not agree with. Ignore them. iMule is being included because it's an excellent file sharing application that uses I2P. It serves the purpose where torrents in I2P fail.
 
 "I2P is an anonymous overlay network - a network within a network. It is intended to protect communication from dragnet surveillance and monitoring by third parties such as ISPs.
 
@@ -16,6 +26,16 @@ No network can be "perfectly anonymous". The continued goal of I2P is to make at
 
 I2P is available on desktops, embedded systems (like the Raspberry Pi) and Android phones. Help spread the word!"
 
-I2P Portable-Specific Issues
-This setup is not currently configured to use a portable JRE. You will need to install a JRE first on your distro before using I2PPortableLin. This may or may not change in the future.
+I2P Portable-Lin-Specific Issues
+Must have bash and an internet connection. Requires wget and tar (you probably have them).
+
+
+Folder Structure:
+App/I2P/ contains I2P
+App/I2PBrowser contains a modified Tor browser for use with I2P
+App/java/ contains the JRE (if not present, the launcher script will fetch it)
+App/DefaultData/ contains the default data, files here are copied to Data/ on first launch and any launch where Data/ is empty
+App/AppInfo/ currently contains some icons
+Data/ this is where configuration files, logs, and such will go after first start. If you screw up your config, delete the files in here and launch the start script
+Other/ Doesn't contain anything at the moment
 

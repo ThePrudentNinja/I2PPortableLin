@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=true
+Name=Start I2P
+Comment=I2P complete with browser and IRC client
+Exec=./.start-i2p
+Icon=./I2PPortableLin/App/AppInfo/app.svg
+Type=Application

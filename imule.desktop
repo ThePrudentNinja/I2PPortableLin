@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=true
+Name=Start iMule
+Comment=aMule client for I2P
+Exec=./.start-imule
+Icon=./I2PPortableLin/App/imule/pixmaps/imule.xpm
+Type=Application

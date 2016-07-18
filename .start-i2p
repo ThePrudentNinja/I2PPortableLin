@@ -1,0 +1,70 @@
+#!/bin/bash
+##################################
+# I2PPortableLin Launch script
+# By TPninja
+#
+# This is a 64bit setup. If you are on a 32bit system, this will NOT work.
+#
+# Version: 1
+##################################
+
+# If the download of JRE fails, change the below URL
+# You can find the download link here: https://java.com/en/download/linux_manual.jsp
+# Look for and copy the link to the "Linux" download.
+JRE='http://javadl.oracle.com/webapps/download/AutoDL?BundleId=207765'
+
+# Set icon for .desktop file
+mv I2P.desktop I2P.desktop-bak
+sed -e "s,Icon=.*,Icon=$PWD/App/AppInfo/app.svg,g" I2P.desktop-bak > I2P.desktop
+rm I2P.desktop-bak
+chmod u+x I2P.desktop
+
+
+# do a check if java has been downloaded, if not, download
+if [ ! -e ./App/java/jreinstalled.txt ]; then
+   echo "Please wait while we prepare a portable JRE"
+   mkdir tmp
+   cd tmp
+   echo "Downloading the 32bit Oracle JRE"
+   wget "$JRE"
+   mv23=$(ls -d *)
+   mv $mv23 java.tar.gz
+   echo "Please wait..."
+   tar -xzf java.tar.gz
+   rm java.tar.gz
+   var=$(ls -d */)
+   echo "$var" >> jreinstalled.txt
+   mv $var java
+   mv jreinstalled.txt java/
+   mv java ../App/java
+   cd ..
+   rm -rf tmp
+   echo "Done preparing the JRE"
+   echo "Continuing to launch I2PPortableLin"
+   ## command to run I2P
+        if [ ! -f ./Data/settings/wrapper.config ]; then
+            echo "Assuming not configured, copying configuration"
+            cp -r "./App/DefaultData/." "./Data/."
+            echo "Launching I2P"
+            ./App/I2P/i2psvc -c ../../Data/settings/wrapper.config
+        else
+            echo "Wrapper.config found, assuming configured"
+            echo "Launching I2P"
+            ./App/I2P/i2psvc -c ../../Data/settings/wrapper.config
+        fi
+else
+   echo "A Portable JRE is already prepared"
+   echo "Launching I2PPortableLin"
+   ## command to run I2P
+        if [ ! -f ./Data/settings/wrapper.config ]; then
+            echo "Assuming not configured, copying configuration"
+            cp -r "./App/DefaultData/." "./Data/."
+            echo "Launching I2P"
+            ./App/I2P/i2psvc -c ../../Data/settings/wrapper.config
+        else
+            echo "Wrapper.config found, assuming configured"
+            echo "Launching I2P"
+            ./App/I2P/i2psvc -c ../../Data/settings/wrapper.config
+        fi
+fi
+

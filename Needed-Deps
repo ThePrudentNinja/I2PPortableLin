@@ -1,0 +1,41 @@
+You will need the following to make use of this suite.
+Please note, I may have overlooked some dependencies.
+If you find a dependency that I neglected to mention,
+please let me know so it can be added here.
+
+You will need the ability to run 64bit applications as this is a 64bit suite.
+You will need internet access.
+You will need sudo or access to root.
+You will need the following software:
+* xterm
+* bash
+* wget
+* sed
+* grep
+* tar
+* glib/gtk-1.2.10 (package names like glib and glibdev
+  or glib-devel, gtk and gtkdev or gtk-devel or similar) or gtk2
+  (package names correspond to gtk ones)
+* libexpat (package name should be expat)
+* gettext
+* wxWidgets-2.8 or greater,
+  linked against glib/gtk-1.2.10 is needed (package names wxGTK and
+  wxGTK-devel or similar).
+* libc6 (>= 2.11)
+* libcrypto++9
+* libgcc1
+* libgeoip1
+* libstdc++6
+* libupnp6 (>= 1:1.6.13)
+* libwxbase2.8-0 (>= 2.8.12.1)
+* libwxgtk2.8-0 (>= 2.8.12.1)
+* zlib1g (>= 1:1.1.4)
+
+Your distro may already have most of these dependencies. The main possible
+problem you will encounter is with running iMule. If you try to run iMule
+and it will not start, make sure you have all of the above dependencies.
+
+I2P and the I2PBrowser should run with what is installed on most distros.
+
+You can find wxWidgets here if it's not in your system package repository:
+https://www.wxwidgets.org/downloads/

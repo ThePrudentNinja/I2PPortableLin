@@ -11,7 +11,7 @@
 # Note that (percent)INSTALL_PATH and (percent)SYSTEM_java_io_tmpdir
 # should have been replaced by the izpack installer.
 # If you did not run the installer, replace them with the appropriate path.
-I2P="/home/unknown/Downloads/I2P"
+I2P="/home/username/Desktop/I2PPortableLin/tmp"
 I2PTEMP="/tmp"
 
 # Having IPv6 enabled can cause problems with certain configurations. Changing the
@@ -21,7 +21,7 @@ CP=
 
 # Try using the Java binary that I2P was installed with.
 # If it's not found, try looking in the system PATH.
-JAVA=$(which /usr/lib/jvm/java-8-oracle/jre/bin/java || which java)
+JAVA=$(which /home/username/Desktop/I2PPortableLin/App/java/bin/java || which java)
 
 if [ -z $JAVA ] || [ ! -x $JAVA ]; then
     echo "Error: Cannot find java." >&2

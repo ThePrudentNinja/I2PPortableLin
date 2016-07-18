@@ -1,0 +1,33 @@
+#!/bin/bash
+
+#setting icon for .desktop
+mv I2PBrowser.desktop I2PBrowser.desktop-bak
+sed -e "s,Icon=.*,Icon=$PWD/App/AppInfo/Browser.ico,g" I2PBrowser.desktop-bak > I2PBrowser.desktop
+rm I2PBrowser.desktop-bak
+chmod u+x I2PBrowser.desktop
+
+
+if [ ! -f ./Data/i2p.pid ]; then
+            xterm -hold -e echo "Please start I2P first"
+            exit 1
+        else
+            echo "i2p.pid found, assuming I2P running..."
+            echo "Launching I2PBrowser"
+            HOME="${PWD}"
+            export HOME
+            LD_LIBRARY_PATH="${HOME}/App/I2PBrowser/Libraries/"
+            export LD_LIBRARY_PATH
+
+            cd ./App/I2PBrowser/
+            ./firefox --class "Tor Browser" -profile '../../Data/Browser/profile.default' > /dev/null 2>&1
+        fi
+
+
+#cleaning up
+echo "Cleaning up"
+rm ../../Data/Browser/profile.default/chatzilla/urls.txt
+rm ../../Data/Browser/profile.default/chatzilla/inputHistory.txt
+rm -f ../../Data/Browser/profile.default/chatzilla/logs/*
+touch ../../Data/Browser/profile.default/chatzilla/urls.txt
+touch ../../Data/Browser/profile.default/chatzilla/inputHistory.txt
+

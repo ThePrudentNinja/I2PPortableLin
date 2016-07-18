@@ -1,0 +1,42 @@
+Manifest-Version: 1.0
+
+Name: install.rdf
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: bR5+O3mxrCwUpjgR5AnqgQ==
+SHA1-Digest: uO9Ych1eWz5wjZnqWubVP8O07oQ=
+
+Name: chrome.manifest
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: x7QU+ZayaDK0FwupZb2LYA==
+SHA1-Digest: Ye5+UZWiXpvY+x7UzgW5ddZ2VzI=
+
+Name: install.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: ttplUsWWsk0+Fi5xZKuotQ==
+SHA1-Digest: JJZBeZcsIDbujk1K/lNYmnWr19A=
+
+Name: chrome/chatzilla.jar
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: l8RDc3NfoeIY+L0AD8HMww==
+SHA1-Digest: JyOD9JP6B5kWPTsMLIZm2siqWJM=
+
+Name: chrome/icons/default/chatzilla-window.ico
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: hGKGET4VUNYmrV3+Q0BydA==
+SHA1-Digest: dxIofmEIW9L+d58bLiAC2UJGnLc=
+
+Name: chrome/icons/default/chatzilla-window.xpm
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: kXpI80PnUInX5VSnNQpY5Q==
+SHA1-Digest: wrSxGM6N/NvTaZBRUs0NdwyIEOY=
+
+Name: chrome/icons/default/chatzilla-window16.xpm
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: FELRxVsbqUDgZ79KGpKD8w==
+SHA1-Digest: V0ioPiF309l00T69ulv4oxbpOQM=
+
+Name: components/chatzilla-service.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 6q9zEDSKN0t3RrT7LXP8WQ==
+SHA1-Digest: TdkHLMJNBvrviGBvxzbvQ8TFd0c=
+

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Name=Start I2PBrowser Only
+Comment=I2P complete with browser and IRC client
+Exec=./.Start-Browser-Only
+Icon=./I2PPortableLin/App/AppInfo/Browser.ico
+Type=Application

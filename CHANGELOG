@@ -1,3 +1,16 @@
 CHANGELOG
+0.9.26.0 Test 1 Lin
+* Rewrite of the launcher script
+* Updated I2P to 0.9.26
+* The launcher script now checks for a portable install of JRE (expected at /App/java)
+  if not found, it will download and prepare a JRE
+* Possibly fixed a bug with i2psnark config
+* Possibly fixed a bug with eepsite config
+* Added a modified Tor Browser for I2P use
+* Added iMule 64bit nomad
+* Loads of tweaks. Essentially a total rewrite
+
+
+OLD CHANGELOG
 0.9.23.0 Development Test 1 Lin
 * First version of the I2PPortableLin

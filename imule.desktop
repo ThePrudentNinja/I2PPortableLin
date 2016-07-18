@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Terminal=true
+Terminal=false
 Name=Start iMule
 Comment=aMule client for I2P
 Exec=./.start-imule

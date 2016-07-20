@@ -9,3 +9,6 @@ Permission is granted to anyone to use this software for any purpose, including 
 
 From the Tor website concerning the license of the Tor browser:
 "Can I distribute Tor? Yes. Most people who ask us this question don't want to distribute just the Tor software, though. They want to distribute the Tor Browser. This includes Firefox Extended Support Release, and the NoScript and HTTPS-Everywhere extensions. You will need to follow the license for those programs as well. Both of those Firefox extensions are distributed under the GNU General Public License, while Firefox ESR is released under the Mozilla Public License."
+
+By using this suite of applications, you agree to the Oracle Binary Code License Agreement for the Java SE Platform Products and JavaFX:
+http://www.oracle.com/technetwork/java/javase/terms/license/index.html

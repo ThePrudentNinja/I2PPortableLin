@@ -7,8 +7,6 @@ CHANGELOG
 * Possibly fixed a bug with i2psnark config
 * Possibly fixed a bug with eepsite config
 * Added a modified Tor Browser for I2P use
-* Added iMule 64bit nomad
-* Loads of tweaks. Essentially a total rewrite
 
 
 OLD CHANGELOG

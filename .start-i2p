@@ -3,15 +3,27 @@
 # I2PPortableLin Launch script
 # By TPninja
 #
-# This is a 64bit setup. If you are on a 32bit system, this will NOT work.
+# This script has been re-written a little in hopes that it
+# works on both 32bit and 64bit systems.
 #
-# Version: 1
+# The below version increases with any major change
+# Version: 3
 ##################################
 
-# If the download of JRE fails, change the below URL
-# You can find the download link here: https://java.com/en/download/linux_manual.jsp
-# Look for and copy the link to the "Linux" download.
-JRE='http://javadl.oracle.com/webapps/download/AutoDL?BundleId=207765'
+MACHINE_TYPE=`uname -m`
+if [ ${MACHINE_TYPE} == 'x86_64' ]; then
+  # If the download of JRE fails, change the below URL
+  # You can find the download link here: https://java.com/en/download/linux_manual.jsp
+  # Look for and copy the link to the "Linux" download.
+  JRE='http://javadl.oracle.com/webapps/download/AutoDL?BundleId=207765'
+  sysver='64bit'
+else
+  # If the download of JRE fails, change the below URL
+  # You can find the download link here: https://java.com/en/download/linux_manual.jsp
+  # Look for and copy the link to the "Linux" download.
+  JRE='http://javadl.oracle.com/webapps/download/AutoDL?BundleId=211987'
+  sysver='32bit'
+fi
 
 # Set icon for .desktop file
 mv I2P.desktop I2P.desktop-bak
@@ -25,7 +37,7 @@ if [ ! -e ./App/java/jreinstalled.txt ]; then
    echo "Please wait while we prepare a portable JRE"
    mkdir tmp
    cd tmp
-   echo "Downloading the 32bit Oracle JRE"
+   echo "Downloading the $sysver Oracle JRE"
    wget "$JRE"
    mv23=$(ls -d *)
    mv $mv23 java.tar.gz
@@ -34,11 +46,18 @@ if [ ! -e ./App/java/jreinstalled.txt ]; then
    rm java.tar.gz
    var=$(ls -d */)
    echo "$var" >> jreinstalled.txt
+   echo "" >> jreinstalled.txt
+   echo "Sytem is $sysver" >> jreinstalled.txt
    mv $var java
    mv jreinstalled.txt java/
    mv java ../App/java
    cd ..
    rm -rf tmp
+   # Allowing for better encryption
+   rm ./App/java/lib/security/local_policy.jar
+   cp ./App/.unjcepolicydk8/local_policy.jar ./App/java/lib/security/
+   rm ./App/java/lib/security/US_export_policy.jar
+   cp ./App/.unjcepolicydk8/US_export_policy.jar ./App/java/lib/security/
    echo "Done preparing the JRE"
    echo "Continuing to launch I2PPortableLin"
    ## command to run I2P

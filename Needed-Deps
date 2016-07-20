@@ -15,6 +15,7 @@ You will need the following software for I2P and the I2PBrowser:
 
 
 You will need the following software for iMule:
+* A 64bit system, this iMule will not run on 32bit systems
 * glib/gtk-1.2.10 (package names like glib and glibdev
   or glib-devel, gtk and gtkdev or gtk-devel or similar) or gtk2
   (package names correspond to gtk ones)

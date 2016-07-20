@@ -3,16 +3,18 @@ Please note, I may have overlooked some dependencies.
 If you find a dependency that I neglected to mention,
 please let me know so it can be added here.
 
-You will need the ability to run 64bit applications as this is a 64bit suite.
 You will need internet access.
 You will need sudo or access to root.
-You will need the following software:
+You will need the following software for I2P and the I2PBrowser:
 * xterm
 * bash
 * wget
 * sed
 * grep
 * tar
+
+
+You will need the following software for iMule:
 * glib/gtk-1.2.10 (package names like glib and glibdev
   or glib-devel, gtk and gtkdev or gtk-devel or similar) or gtk2
   (package names correspond to gtk ones)

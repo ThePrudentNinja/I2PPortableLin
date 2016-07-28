@@ -5,5 +5,5 @@ Terminal=false
 Name=Start iMule 64bit
 Comment=aMule client for I2P
 Exec=./.start-imule
-Icon=/home/username/I2PPortableLin/App/AppInfo/imule.xpm
+Icon=/I2PPortableLin/App/AppInfo/imule.xpm
 Type=Application

@@ -7,15 +7,25 @@
 # works on both 32bit and 64bit systems.
 #
 # The below version increases with any major change
-# Version: 3
+# Version: 4
 ##################################
+
+# Checking for xterm
+xterm() {
+    if hash xterm -version 2>/dev/null; then
+        echo "xterm found..."
+    else
+        echo "xterm not found, please install xterm"
+        exit 1
+    fi
+}
 
 MACHINE_TYPE=`uname -m`
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
   # If the download of JRE fails, change the below URL
   # You can find the download link here: https://java.com/en/download/linux_manual.jsp
   # Look for and copy the link to the "Linux" download.
-  JRE='http://javadl.oracle.com/webapps/download/AutoDL?BundleId=207765'
+  JRE='http://javadl.oracle.com/webapps/download/AutoDL?BundleId=211989'
   sysver='64bit'
 else
   # If the download of JRE fails, change the below URL
@@ -34,7 +44,7 @@ chmod u+x I2P.desktop
 
 # do a check if java has been downloaded, if not, download
 if [ ! -e ./App/java/jreinstalled.txt ]; then
-   echo "Please wait while we prepare a portable JRE"
+   echo "Please wait while a portable JRE is prepared"
    mkdir tmp
    cd tmp
    echo "Downloading the $sysver Oracle JRE"

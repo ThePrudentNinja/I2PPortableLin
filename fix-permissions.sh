@@ -19,8 +19,6 @@ chmod +x ./.Start-Browser-Only
 chmod +x ./.start-i2p
 chmod +x ./I2PBrowser.desktop
 chmod +x ./I2P.desktop
-chmod +x ./imule.desktop
-chmod +x ./.start-imule
 chmod +x ./App/I2P/eepget
 chmod +x ./App/I2P/eepgetbrowser
 chmod +x ./App/I2P/i2prouter

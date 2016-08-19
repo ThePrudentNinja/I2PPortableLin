@@ -1,4 +1,10 @@
 CHANGELOG
+0.9.26.0 Test 2 Lin
+* Redid the browser config
+* Cleaned up some stuff
+* Various other stuff I forgot to take note of
+* Mostly a bugfix release
+
 0.9.26.0 Test 1 Lin
 * Rewrite of the launcher script
 * Updated I2P to 0.9.26

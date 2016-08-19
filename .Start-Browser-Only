@@ -1,4 +1,20 @@
 #!/bin/bash
+##################################
+# I2PPortableLin I2PBrowser Launch script
+# By TPninja
+#
+# Simply launches the browser
+##################################
+
+# Checking for xterm
+xterm() {
+    if hash xterm -version 2>/dev/null; then
+        echo "xterm found..."
+    else
+        echo "xterm not found, please install xterm"
+        exit 1
+    fi
+}
 
 #setting icon for .desktop
 mv I2PBrowser.desktop I2PBrowser.desktop-bak

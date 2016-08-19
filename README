@@ -4,22 +4,20 @@ Project Github: https://github.com/ThePrudentNinja/I2PPortableLin
 I2P Project Homepage: http://geti2p.net/
 
 TO GET STARTED:
-First, if you are using a 32bit system, iMule will not work, it is 64bit.
 Download or clone this project and extract if needed.
 https://github.com/ThePrudentNinja/I2PPortableLin/blob/master/Other/i2pportablelin.tar.bz2?raw=true
 
-Set +x on the fix-permissions.sh script and execute it. Read the file Needed-Deps and make sure you have them all (most are for iMule). Start I2P via the I2P.desktop file. Wait awhile (first launch needs to download and prepare java so I2P can use it), then start the I2PBrowser.desktop to start the browser. For iMule, wait about a half hour or so from first start so I2P has a chance to become better integrated into the network. the iMule aspect of this "suite" is experimental. If you find problems, let me know. Once you have I2P and the I2PBrowser up, click the bookmark for changing your bandwidth settings and adjust them to match your internet speed. If on the I2P router console page (the home page for the I2PBrowser) says "Network OK", then all is good. If it says you are firewalled, you will need to find the port that I2P is using and forward it on your router. Each router is different so I can't tell you how. You could remain firewalled but it will seriously impact performance and anonymity.
+Set +x on the fix-permissions.sh script and execute it. Read the file Needed-Deps and make sure you have them all. Start I2P via the I2P.desktop file. Wait awhile (first launch needs to download and prepare java so I2P can use it), then start the I2PBrowser.desktop to start the browser. If you find problems, let me know. Once you have I2P and the I2PBrowser up, click the bookmark for changing your bandwidth settings and adjust them to match your internet speed. If on the I2P router console page (the home page for the I2PBrowser) says "Network OK", then all is good. If it says you are firewalled, you will need to find the port that I2P is using and forward it on your router. Each router is different so I can't tell you how. You could remain firewalled but it will seriously impact performance and anonymity. If you are in China, leave firewalled.
 
 This project and I are not affiliated in any way with I2P ( http://geti2p.net ) or the developers of I2P. Do not pester them with issues relating to I2PPortable unless the issue is directly related to I2P itself.
 
-This "suite" is I2P with a modified Tor browser. The Tor browser has been modified to connect to I2P and has an IRC chat client built in. I2P.desktop lauches I2P. I2PBrowser.desktop lauches the browser. imule.desktop launches iMule. On first start or after deleting configuration, start I2P.desktop first. It copies all the default configuration data to the Data/ folder. If you ever screw up your configuration, you can delete the contents of the Data/ folder (the folder that contains the file named DataFolder) then launch I2P.desktop to copy the default config over.
+This "suite" is I2P with a modified Tor browser. The Tor browser has been modified to connect to I2P and has an IRC chat client built in. I2P.desktop lauches I2P. I2PBrowser.desktop lauches the browser. On first start or after deleting configuration, start I2P.desktop first. It copies all the default configuration data to the Data/ folder. If you ever screw up your configuration, you can delete the contents of the Data/ folder (the folder that contains the file named DataFolder) then launch I2P.desktop to copy the default config over.
 
 To chat with others on the IRC network within I2P, click the "Chat with us!" bookmark and wait. It's a good idea to have your router up and running at least a half hour before trying to join us for chat. This is why it's a good idea to leave I2P running so next time you can just launch the browser and I2P is already running and well integrated (which means faster and more stable).
 
-Be sure to adjust your bandwidth configuration (there is a bookmark for that) so I2P will run at its best. It's advised to not set the share setting below about 50% as it will make it easier for observers to spot your traffic. The more you share, the better it is. The closer the bandwidth settings are to your actual internet speeds, the better I2P will perform and the more satisfied you will be with it.
+Be sure to adjust your bandwidth configuration (there is a bookmark for that) so I2P will run at its best. It's advised to not set the share setting below about 50% as it will make it easier for observers to spot your traffic. It can be lowered, but just make sure you know what you're doing. The more you share, the better it is. The closer the bandwidth settings are to your actual internet speeds, the better I2P will perform and the more satisfied you will be with it.
 
-iMule has been added as well for file sharing purposes. Please read the file named: Needed-Deps
-Also note, due to the nature of file sharing on I2P (and any anonymous network), you may see files you may not agree with. Ignore them. iMule is being included because it's an excellent file sharing application that uses I2P. It serves the purpose where torrents in I2P fail.
+I am considering the possibility of including i2phex in this suite. Contact me to let me know your thoughts.
 
 "I2P is an anonymous overlay network - a network within a network. It is intended to protect communication from dragnet surveillance and monitoring by third parties such as ISPs.
 
@@ -40,5 +38,5 @@ App/java/ contains the JRE (if not present, the launcher script will fetch it)
 App/DefaultData/ contains the default data, files here are copied to Data/ on first launch and any launch where Data/ is empty
 App/AppInfo/ currently contains some icons
 Data/ this is where configuration files, logs, and such will go after first start. If you screw up your config, delete the files in here and launch the start script
-Other/ Doesn't contain anything at the moment
+Other/ contained an archive of the suite for easy download
 

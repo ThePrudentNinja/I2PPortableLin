@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Terminal=false
-Name=Start iMule 64bit
-Comment=aMule client for I2P
-Exec=./.start-imule
-Icon=/I2PPortableLin/App/AppInfo/imule.xpm
-Type=Application

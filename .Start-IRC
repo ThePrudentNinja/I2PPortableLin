@@ -1,0 +1,40 @@
+#!/bin/bash
+##################################
+# I2PPortableLin jIRCii Launch script
+# By TPninja
+#
+# Simply launches jIRCii
+##################################
+
+# Checking for xterm
+xterm() {
+    if hash xterm -version 2>/dev/null; then
+        echo "xterm found..."
+    else
+        echo "xterm not found, please install xterm"
+        exit 1
+    fi
+}
+
+#setting icon for .desktop
+mv jIRCii.desktop jIRCii.desktop-bak
+sed -e "s,Icon=.*,Icon=$PWD/App/AppInfo/irc.png,g" jIRCii.desktop-bak > jIRCii.desktop
+rm jIRCii.desktop-bak
+chmod u+x jIRCii.desktop
+
+
+#if [ ! -f ./Data/i2p.pid ]; then
+#            xterm -hold -e echo "Please start I2P first"
+#            exit 1
+#        else
+            echo "i2p.pid found, assuming I2P running..."
+            echo "Launching jIRCii"
+            cd ./App/jIRCii
+            ../java/bin/java -jar lib/jircii.jar -settings ../../Data/jIRCii
+#        fi
+
+
+#cleaning up
+#echo "Cleaning up"
+#some cleanup here maybe?
+

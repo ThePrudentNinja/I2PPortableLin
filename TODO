@@ -1,0 +1,4 @@
+mod i2p script to check for wget and other needed things, or fail
+fix eepget script in browser
+update browser
+

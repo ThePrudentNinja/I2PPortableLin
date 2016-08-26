@@ -1,0 +1,40 @@
+#!/bin/bash
+##################################
+# I2PPortableLin i2phex Launch script
+# By TPninja
+#
+# Simply launches i2phex
+##################################
+
+# Checking for xterm
+xterm() {
+    if hash xterm -version 2>/dev/null; then
+        echo "xterm found..."
+    else
+        echo "xterm not found, please install xterm"
+        exit 1
+    fi
+}
+
+#setting icon for .desktop
+mv i2phex.desktop i2phex.desktop-bak
+sed -e "s,Icon=.*,Icon=$PWD/App/AppInfo/phex.png,g" i2phex.desktop-bak > i2phex.desktop
+rm i2phex.desktop-bak
+chmod u+x i2phex.desktop
+
+
+if [ ! -f ./Data/i2p.pid ]; then
+            xterm -hold -e echo "Please start I2P first"
+            exit 1
+        else
+            echo "i2p.pid found, assuming I2P running..."
+            echo "Launching i2phex"
+            cd ./App/i2phex
+            ../java/bin/java -cp ../I2P/lib/i2p.jar:../I2P/lib/mstreaming.jar:../I2P/lib/streaming.jar:../I2P/lib/jbigi.jar:lib/phex.jar phex.Main -c ../../Data/i2phex
+        fi
+
+
+#cleaning up
+#echo "Cleaning up"
+#some cleanup here maybe?
+

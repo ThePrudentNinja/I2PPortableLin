@@ -1,0 +1,30 @@
+[
+  {
+    "description": "[00] Irc2p: Non-SOCKS 6668",
+    "host": "127.0.0.1",
+    "portRange": "6668",
+    "isSSL": false,
+    "compare": "127.0.0.1"
+  },
+  {
+    "description": "[Irc2p] Irc2p: postman (SOCKS)",
+    "host": "irc.postman.i2p",
+    "portRange": "6667",
+    "isSSL": false,
+    "compare": "IRC.POSTMAN.I2P"
+  },
+  {
+    "description": "[Irc2p] Irc2p: echelon (SOCKS)",
+    "host": "irc.echelon.i2p",
+    "portRange": "6667",
+    "isSSL": false,
+    "compare": "IRC.ECHELON.I2P"
+  },
+  {
+    "description": "[Irc2p] Irc2p: dg (SOCKS)",
+    "host": "irc.dg.i2p",
+    "portRange": "6667",
+    "isSSL": false,
+    "compare": "IRC.DG.I2P"
+  }
+]

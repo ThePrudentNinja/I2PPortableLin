@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Name=Start IRC
+Comment=irc client for i2p
+Exec=./.Start-IRC
+Icon=i2pportablelin/App/AppInfo/irc.png
+Type=Application

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Name=Start i2phex
+Comment=gnutella filesharing client for i2p
+Exec=./.Start-i2phex
+Icon=i2pportablelin/App/AppInfo/phex.png
+Type=Application

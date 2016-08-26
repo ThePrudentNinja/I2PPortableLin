@@ -14,10 +14,14 @@ if [ -z "$1" ]
     exit 1
 fi
 
-chown -R $1:$1 ../I2PPortableLin
+chown -R $1:$1 ../i2pportablelin
 chmod +x ./.Start-Browser-Only 
 chmod +x ./.start-i2p
+chmod +x ./.Start-IRC
+chmod +x ./.Start-i2phex
 chmod +x ./I2PBrowser.desktop
+chmod +x ./i2phex.desktop
+chmod +x ./jIRCii.desktop
 chmod +x ./I2P.desktop
 chmod +x ./App/I2P/eepget
 chmod +x ./App/I2P/eepgetbrowser
